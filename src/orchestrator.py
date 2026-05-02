@@ -1,8 +1,8 @@
 from typing import Dict, Any, List
 
-from llm import parse_intent
-from policy import evaluate_policy
-from services import (
+from src.parsing.llm_parser import parse_intent
+from src.policy.policy_engine import evaluate_policy
+from src.services.simulation import (
     get_balance,
     get_policies,
     get_service_health,

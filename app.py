@@ -1,8 +1,8 @@
 import json
 import streamlit as st
 
-from orchestrator import handle_request
-from services import get_service_health, set_service_health
+from src.orchestrator import handle_request
+from src.services.simulation import get_service_health, set_service_health
 
 st.set_page_config(page_title="Safe Treasury Copilot", layout="wide")
 st.title("Safe Treasury Copilot (Prototype)")

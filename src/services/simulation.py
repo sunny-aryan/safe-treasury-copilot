@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict
 
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 
 
 def load_json(filename: str) -> Dict[str, Any]:
