@@ -1,0 +1,6 @@
+{
+  "max_swap_without_manual_review": 10000,
+  "max_protocol_deposit_without_manual_review": 15000,
+  "allowlisted_protocols": ["Aave", "Spark"],
+  "allowlisted_wallets": ["operations_wallet", "payroll_wallet"]
+}

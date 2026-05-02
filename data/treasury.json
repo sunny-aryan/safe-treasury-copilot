@@ -1,0 +1,8 @@
+{
+  "safe_id": "safe_treasury_main",
+  "balances": {
+    "USDC": 50000,
+    "ETH": 8,
+    "DAI": 12000
+  }
+}
