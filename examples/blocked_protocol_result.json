@@ -24,22 +24,13 @@
       "Destination is not allowlisted."
     ]
   },
-  "simulation": {
-    "success": true,
-    "simulation_type": "deposit",
-    "protocol": "Compound",
-    "token": "USDC",
-    "amount": 10000.0,
-    "estimated_status": "funds_deposited"
-  },
+  "simulation": null,
   "warnings": [],
   "audit": [
     "User input: Deposit 10000 USDC into Compound and prepare a proposal",
     "Parsed intent: {'action': 'deposit_protocol', 'token': 'USDC', 'protocol': 'Compound', 'amount': 10000, 'parser_mode': 'openai'}",
     "Service health: {'indexer': 'healthy', 'simulation_service': 'healthy', 'tx_service': 'healthy'}",
     "Policy result: {'decision': 'blocked', 'approval_tier': None, 'approval_required': False, 'risk_score': 80, 'risk_factors': ['Amount is within auto-proposal threshold.', \"Protocol 'Compound' has unknown risk.\"], 'blocking_reasons': ['Destination is not allowlisted.'], 'approval_reasons': [], 'reasons': ['Destination is not allowlisted.']}",
-    "Balance check for USDC: 50000",
-    "Simulation result: {'success': True, 'simulation_type': 'deposit', 'protocol': 'Compound', 'token': 'USDC', 'amount': 10000.0, 'estimated_status': 'funds_deposited'}",
-    "Request blocked by policy."
+    "Request blocked by policy before balance check or simulation."
   ]
 }

@@ -51,6 +51,19 @@ def handle_request(user_input: str) -> Dict[str, Any]:
 
     simulation = None
 
+    if policy_result["decision"] == "blocked":
+        audit.append("Request blocked by policy before balance check or simulation.")
+
+        return {
+            "status": "blocked",
+            "intent": intent,
+            "policy_result": policy_result,
+            "simulation": simulation,
+            "warnings": warnings,
+            "audit": audit,
+        }
+
+
     if intent["action"] in ["swap_asset", "deposit_protocol", "transfer_wallet"]:
         if health["simulation_service"] != "healthy":
             return {
@@ -150,17 +163,6 @@ def handle_request(user_input: str) -> Dict[str, Any]:
         )
         audit.append(f"Simulation result: {simulation}")
 
-    if policy_result["decision"] == "blocked":
-        audit.append("Request blocked by policy.")
-
-        return {
-            "status": "blocked",
-            "intent": intent,
-            "policy_result": policy_result,
-            "simulation": simulation,
-            "warnings": warnings,
-            "audit": audit,
-        }
 
     proposal = create_proposal(
         intent,
