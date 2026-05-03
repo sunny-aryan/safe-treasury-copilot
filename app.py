@@ -42,12 +42,22 @@ sample_prompts = [
     "Convert 5000 USDC into ETH and prepare a proposal",
     "Deposit 10000 USDC into Aave and prepare a proposal",
     "Deposit 20000 USDC into Aave and prepare a proposal",
+    "Deposit 10000 USDC into Compound and prepare a proposal",
     "Move some treasury funds into a safer asset",
     "Send 2000 USDC to operations_wallet and prepare a proposal"
 ]
 
 selected = st.selectbox("Try a sample prompt", [""] + sample_prompts)
-user_input = st.text_area("Enter treasury request", value=selected, height=120)
+
+st.caption(
+    "Use a sample prompt for quick testing, or enter any treasury request in natural language below."
+)
+
+user_input = st.text_area(
+    "Enter treasury request",
+    value=selected,
+    height=120,
+)
 
 if st.button("Run"):
     if not user_input.strip():
