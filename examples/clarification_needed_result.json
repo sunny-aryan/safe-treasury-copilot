@@ -1,0 +1,12 @@
+{
+  "status": "clarification_needed",
+  "intent": {
+    "action": "clarification_needed",
+    "question": "How much would you like to move, and which safer asset do you have in mind?",
+    "parser_mode": "openai"
+  },
+  "audit": [
+    "User input: Move some treasury funds into a safer asset",
+    "Parsed intent: {'action': 'clarification_needed', 'question': 'How much would you like to move, and which safer asset do you have in mind?', 'parser_mode': 'openai'}"
+  ]
+}

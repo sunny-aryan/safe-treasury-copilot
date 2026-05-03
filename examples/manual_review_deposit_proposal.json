@@ -1,0 +1,70 @@
+{
+  "status": "human_approval_required",
+  "intent": {
+    "action": "deposit_protocol",
+    "token": "USDC",
+    "protocol": "Aave",
+    "amount": 20000,
+    "parser_mode": "openai"
+  },
+  "policy_result": {
+    "decision": "requires_approval",
+    "approval_tier": "manual_review",
+    "approval_required": true,
+    "risk_score": 40,
+    "risk_factors": [
+      "Amount 20000.0 exceeds manual review threshold of 15000.",
+      "Protocol 'Aave' has low risk."
+    ],
+    "blocking_reasons": [],
+    "approval_reasons": [
+      "Risk score requires manual review."
+    ],
+    "reasons": [
+      "Risk score requires manual review."
+    ]
+  },
+  "simulation": {
+    "success": true,
+    "simulation_type": "deposit",
+    "protocol": "Aave",
+    "token": "USDC",
+    "amount": 20000.0,
+    "estimated_status": "funds_deposited"
+  },
+  "proposal": {
+    "proposal_id": "proposal_001",
+    "status": "created",
+    "human_approval_required": true,
+    "approval_tier": "manual_review",
+    "policy_decision": "requires_approval",
+    "policy_reasons": [
+      "Risk score requires manual review."
+    ],
+    "payload": {
+      "action": "deposit_protocol",
+      "token": "USDC",
+      "protocol": "Aave",
+      "amount": 20000,
+      "parser_mode": "openai"
+    },
+    "simulation_summary": {
+      "success": true,
+      "simulation_type": "deposit",
+      "protocol": "Aave",
+      "token": "USDC",
+      "amount": 20000.0,
+      "estimated_status": "funds_deposited"
+    }
+  },
+  "warnings": [],
+  "audit": [
+    "User input: Deposit 20000 USDC into Aave and prepare a proposal",
+    "Parsed intent: {'action': 'deposit_protocol', 'token': 'USDC', 'protocol': 'Aave', 'amount': 20000, 'parser_mode': 'openai'}",
+    "Service health: {'indexer': 'healthy', 'simulation_service': 'healthy', 'tx_service': 'healthy'}",
+    "Policy result: {'decision': 'requires_approval', 'approval_tier': 'manual_review', 'approval_required': True, 'risk_score': 40, 'risk_factors': ['Amount 20000.0 exceeds manual review threshold of 15000.', \"Protocol 'Aave' has low risk.\"], 'blocking_reasons': [], 'approval_reasons': ['Risk score requires manual review.'], 'reasons': ['Risk score requires manual review.']}",
+    "Balance check for USDC: 50000",
+    "Simulation result: {'success': True, 'simulation_type': 'deposit', 'protocol': 'Aave', 'token': 'USDC', 'amount': 20000.0, 'estimated_status': 'funds_deposited'}",
+    "Proposal created with approval requirement: {'proposal_id': 'proposal_001', 'status': 'created', 'human_approval_required': True, 'approval_tier': 'manual_review', 'policy_decision': 'requires_approval', 'policy_reasons': ['Risk score requires manual review.'], 'payload': {'action': 'deposit_protocol', 'token': 'USDC', 'protocol': 'Aave', 'amount': 20000, 'parser_mode': 'openai'}, 'simulation_summary': {'success': True, 'simulation_type': 'deposit', 'protocol': 'Aave', 'token': 'USDC', 'amount': 20000.0, 'estimated_status': 'funds_deposited'}}"
+  ]
+}

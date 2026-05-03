@@ -1,0 +1,62 @@
+{
+  "status": "proposal_created",
+  "intent": {
+    "action": "swap_asset",
+    "from_token": "USDC",
+    "to_token": "ETH",
+    "amount": 5000,
+    "parser_mode": "openai"
+  },
+  "policy_result": {
+    "decision": "pass",
+    "approval_tier": "auto_proposal",
+    "approval_required": false,
+    "risk_score": 15,
+    "risk_factors": [
+      "Amount is within auto-proposal threshold.",
+      "Swap action has standard execution risk."
+    ],
+    "blocking_reasons": [],
+    "approval_reasons": [],
+    "reasons": []
+  },
+  "simulation": {
+    "success": true,
+    "simulation_type": "swap",
+    "estimated_output": 1.5625,
+    "output_token": "ETH",
+    "slippage_bps": 35
+  },
+  "proposal": {
+    "proposal_id": "proposal_001",
+    "status": "created",
+    "human_approval_required": false,
+    "approval_tier": "auto_proposal",
+    "policy_decision": "pass",
+    "policy_reasons": [],
+    "payload": {
+      "action": "swap_asset",
+      "from_token": "USDC",
+      "to_token": "ETH",
+      "amount": 5000,
+      "parser_mode": "openai"
+    },
+    "simulation_summary": {
+      "success": true,
+      "simulation_type": "swap",
+      "estimated_output": 1.5625,
+      "output_token": "ETH",
+      "slippage_bps": 35
+    }
+  },
+  "warnings": [],
+  "audit": [
+    "User input: Convert 5000 USDC into ETH and prepare a proposal",
+    "Parsed intent: {'action': 'swap_asset', 'from_token': 'USDC', 'to_token': 'ETH', 'amount': 5000, 'parser_mode': 'openai'}",
+    "Service health: {'indexer': 'healthy', 'simulation_service': 'healthy', 'tx_service': 'healthy'}",
+    "Policy result: {'decision': 'pass', 'approval_tier': 'auto_proposal', 'approval_required': False, 'risk_score': 15, 'risk_factors': ['Amount is within auto-proposal threshold.', 'Swap action has standard execution risk.'], 'blocking_reasons': [], 'approval_reasons': [], 'reasons': []}",
+    "Balance check for USDC: 50000",
+    "Simulation result: {'success': True, 'simulation_type': 'swap', 'estimated_output': 1.5625, 'output_token': 'ETH', 'slippage_bps': 35}",
+    "Proposal created: {'proposal_id': 'proposal_001', 'status': 'created', 'human_approval_required': False, 'approval_tier': 'auto_proposal', 'policy_decision': 'pass', 'policy_reasons': [], 'payload': {'action': 'swap_asset', 'from_token': 'USDC', 'to_token': 'ETH', 'amount': 5000, 'parser_mode': 'openai'}, 'simulation_summary': {'success': True, 'simulation_type': 'swap', 'estimated_output': 1.5625, 'output_token': 'ETH', 'slippage_bps': 35}}"
+  ]
+}
