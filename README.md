@@ -86,6 +86,17 @@ The policy engine maps the risk result into one of three outcomes:
 | `requires_approval` | Proposal can be created, but requires human approval |
 | `blocked` | Proposal should not be created |
 
+## Example Outputs
+
+The repository includes example outputs generated from the orchestrator.
+
+| Scenario | Example output | What it demonstrates |
+|---|---|---|
+| Low-risk swap | [`examples/low_risk_swap_proposal.json`](examples/low_risk_swap_proposal.json) | Proposal creation for a low-risk treasury action |
+| Manual-review deposit | [`examples/manual_review_deposit_proposal.json`](examples/manual_review_deposit_proposal.json) | Risk-based approval escalation |
+| Blocked protocol deposit | [`examples/blocked_protocol_result.json`](examples/blocked_protocol_result.json) | Deterministic policy enforcement before simulation |
+| Ambiguous request | [`examples/clarification_needed_result.json`](examples/clarification_needed_result.json) | Clarification instead of unsafe guessing |
+
 ## Service Degradation Handling
 
 The prototype includes service health controls for:
