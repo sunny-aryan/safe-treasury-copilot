@@ -150,8 +150,25 @@ def handle_request(user_input: str) -> Dict[str, Any]:
         )
         audit.append(f"Simulation result: {simulation}")
 
-    if not policy_result["allowed"]:
-        proposal = create_proposal(intent, simulation or {})
+    if policy_result["decision"] == "blocked":
+        audit.append("Request blocked by policy.")
+
+        return {
+            "status": "blocked",
+            "intent": intent,
+            "policy_result": policy_result,
+            "simulation": simulation,
+            "warnings": warnings,
+            "audit": audit,
+        }
+
+    proposal = create_proposal(
+        intent,
+        simulation or {},
+        policy_result=policy_result,
+    )
+
+    if policy_result["decision"] == "requires_approval":
         audit.append(f"Proposal created with approval requirement: {proposal}")
 
         return {
@@ -161,10 +178,9 @@ def handle_request(user_input: str) -> Dict[str, Any]:
             "simulation": simulation,
             "proposal": proposal,
             "warnings": warnings,
-            "audit": audit
+            "audit": audit,
         }
 
-    proposal = create_proposal(intent, simulation or {})
     audit.append(f"Proposal created: {proposal}")
 
     return {
@@ -174,5 +190,5 @@ def handle_request(user_input: str) -> Dict[str, Any]:
         "simulation": simulation,
         "proposal": proposal,
         "warnings": warnings,
-        "audit": audit
+        "audit": audit,
     }
