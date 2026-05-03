@@ -1,6 +1,40 @@
 {
-  "max_swap_without_manual_review": 10000,
-  "max_protocol_deposit_without_manual_review": 15000,
-  "allowlisted_protocols": ["Aave", "Spark"],
-  "allowlisted_wallets": ["operations_wallet", "payroll_wallet"]
+  "amount_thresholds": {
+    "swap_asset": {
+      "manual_review": 10000,
+      "multi_sig_required": 50000
+    },
+    "deposit_protocol": {
+      "manual_review": 15000,
+      "multi_sig_required": 75000
+    },
+    "transfer_wallet": {
+      "manual_review": 10000,
+      "multi_sig_required": 50000
+    }
+  },
+  "protocols": {
+    "Aave": {
+      "allowlisted": true,
+      "risk_level": "low"
+    },
+    "Spark": {
+      "allowlisted": true,
+      "risk_level": "medium"
+    },
+    "Compound": {
+      "allowlisted": false,
+      "risk_level": "unknown"
+    }
+  },
+  "wallets": {
+    "operations_wallet": {
+      "allowlisted": true,
+      "risk_level": "low"
+    },
+    "payroll_wallet": {
+      "allowlisted": true,
+      "risk_level": "medium"
+    }
+  }
 }
