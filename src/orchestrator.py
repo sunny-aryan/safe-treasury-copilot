@@ -1,16 +1,12 @@
 from typing import Dict, Any, List
 
+from src.data_loader import get_policies
 from src.parsing.llm_parser import parse_intent
 from src.policy.policy_engine import evaluate_policy
-from src.services.simulation import (
-    get_balance,
-    get_policies,
-    get_service_health,
-    simulate_swap,
-    simulate_deposit,
-    simulate_transfer,
-    create_proposal,
-)
+from src.services.balances import get_balance
+from src.services.health import get_service_health
+from src.services.simulation import simulate_swap, simulate_deposit, simulate_transfer
+from src.proposals.proposal_generator import create_proposal
 
 
 def handle_request(user_input: str) -> Dict[str, Any]:
