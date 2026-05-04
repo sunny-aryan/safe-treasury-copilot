@@ -2,7 +2,7 @@
 
 ## Overview
 
-Safe Treasury Copilot is an AI-assisted treasury proposal system that converts natural-language treasury requests into structured proposals, validates them against deterministic policy rules, simulates expected outcomes, and routes requests into approval tiers based on risk.
+Safe Treasury Copilot is an AI-assisted proposal system for crypto / Web3 treasury operations on blockchain-based financial infrastructure. It converts natural-language requests for token swaps, protocol deposits, and wallet transfers into structured proposals, validates them against deterministic policy rules, simulates expected outcomes, and routes requests into approval tiers based on risk.
 
 The system intentionally creates proposals only. It does not execute transactions.
 
@@ -13,13 +13,17 @@ The system intentionally creates proposals only. It does not execute transaction
 
 ## Problem
 
-Treasury teams often need to evaluate requests such as swaps, protocol deposits, and wallet transfers. These workflows require speed, but they also require strong controls because mistakes can lead to financial loss, compliance issues, or operational risk.
+Crypto / Web3 treasury teams often need to prepare actions such as token swaps, protocol deposits, and wallet transfers. These workflows require speed and clarity, but they also carry meaningful operational risk because mistakes can lead to financial loss, exposure to unsafe protocols, failed transactions, or approval breakdowns.
 
-Natural-language interfaces can make treasury operations easier to initiate, but they introduce risk if an LLM is allowed to make policy or execution decisions.
+Unlike traditional banking treasury operations, blockchain-based treasury workflows often involve token balances, wallet destinations, protocol interactions, simulation dependencies, and approval processes such as multisig review. A request that sounds simple in natural language may still require policy checks, balance validation, risk assessment, and human approval before it should move forward.
+
+Natural-language interfaces can make treasury workflows easier to initiate, but they introduce risk if an LLM is allowed to make policy or execution decisions. A safe system should use the LLM to interpret intent, while deterministic systems enforce rules, evaluate risk, and decide whether a request can become a proposal.
+
+Safe Treasury Copilot explores this product challenge: how might an AI-assisted treasury workflow improve speed and usability while preserving explicit controls, auditability, and human oversight?
 
 ## Target User
 
-This project is designed around a treasury operator or finance/operations team member who needs to prepare treasury actions for review.
+This project is designed around a crypto treasury operator, Web3 finance/operations team member, or DAO treasury manager who needs to prepare token swaps, protocol deposits, or wallet transfers for review.
 
 ## Solution
 
