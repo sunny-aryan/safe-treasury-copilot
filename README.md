@@ -97,6 +97,33 @@ The repository includes example outputs generated from the orchestrator.
 | Blocked protocol deposit | [`examples/blocked_protocol_result.json`](examples/blocked_protocol_result.json) | Deterministic policy enforcement before simulation |
 | Ambiguous request | [`examples/clarification_needed_result.json`](examples/clarification_needed_result.json) | Clarification instead of unsafe guessing |
 
+## Screenshots
+
+### Low-risk swap: proposal created
+
+This flow shows a low-risk swap that passes policy checks and creates a proposal.
+
+![Low-risk swap proposal](screenshots/low_risk_swap.png)
+
+Full JSON output: [`examples/low_risk_swap_proposal.json`](examples/low_risk_swap_proposal.json)
+
+### Manual-review deposit: approval required
+
+This flow shows an allowlisted protocol deposit that exceeds the manual review threshold and is routed for human approval.
+
+![Manual-review deposit](screenshots/manual_review_deposit.png)
+
+Full JSON output: [`examples/manual_review_deposit_proposal.json`](examples/manual_review_deposit_proposal.json)
+
+### Blocked protocol deposit: policy short-circuit
+
+This flow shows a non-allowlisted protocol being blocked before balance checks or simulation.
+
+![Blocked protocol deposit](screenshots/blocked_protocol.png)
+
+Full JSON output: [`examples/blocked_protocol_result.json`](examples/blocked_protocol_result.json)
+
+
 ## Service Degradation Handling
 
 The prototype includes service health controls for:
