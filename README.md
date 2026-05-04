@@ -6,6 +6,11 @@ Safe Treasury Copilot is an AI-assisted treasury proposal system that converts n
 
 The system intentionally creates proposals only. It does not execute transactions.
 
+## Supporting Product Artifacts
+
+- [`PRODUCT_NOTES.md`](PRODUCT_NOTES.md) — product framing, user jobs, success metrics, risks, and scope decisions
+- [`TRADEOFFS.md`](TRADEOFFS.md) — key design trade-offs and intentional limitations
+
 ## Problem
 
 Treasury teams often need to evaluate requests such as swaps, protocol deposits, and wallet transfers. These workflows require speed, but they also require strong controls because mistakes can lead to financial loss, compliance issues, or operational risk.
@@ -186,6 +191,12 @@ OPENAI_API_KEY=your_api_key_here
 ```bash
 streamlit run app.py
 ```
+
+## Portfolio Context
+
+This project is part of a product portfolio focused on AI-assisted workflows, safety-critical decision systems, and realistic product trade-offs.
+
+The goal is not to demonstrate production-ready treasury infrastructure, but to show how a product leader might structure an AI-assisted workflow where natural-language convenience must be balanced against deterministic controls, approval gates, and operational risk.
 
 ## Future Improvements
 
