@@ -161,7 +161,7 @@ Key trade-offs:
 1. Clone the repository.
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/sunny-aryan/safe-treasury-copilot.git
 cd safe-treasury-copilot
 ```
 
